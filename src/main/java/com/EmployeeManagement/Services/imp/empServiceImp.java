@@ -42,7 +42,7 @@ public class empServiceImp implements EmpService {
         Employee employee=repo.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not found by id"));
         employee.setFirstName(employeedto.getFirstName());
         employee.setLastName(employeedto.getLastName());
-        employeedto.setEmail(employeedto.getEmail());
+        employee.setEmail(employeedto.getEmail());
 
 
         Employee save = repo.save(employee);
