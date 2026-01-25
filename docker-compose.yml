@@ -8,8 +8,8 @@ services:
       - "9090:9090"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/vishwa_db
-      SPRING_DATASOURCE_USERNAME: vishwa_user
-      SPRING_DATASOURCE_PASSWORD: vishwa_pass
+      SPRING_DATASOURCE_USERNAME: # add user and password
+      SPRING_DATASOURCE_PASSWORD: 
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       mysql:
@@ -20,8 +20,8 @@ services:
     image: mysql:latest
     environment:
       MYSQL_DATABASE: vishwa_db
-      MYSQL_USER: vishwa_user
-      MYSQL_PASSWORD: vishwa_pass
+      MYSQL_USER: # add user and password
+      MYSQL_PASSWORD: 
       MYSQL_ROOT_PASSWORD: root_pass
     ports:
       - "3307:3306"
