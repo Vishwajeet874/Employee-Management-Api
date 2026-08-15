@@ -25,7 +25,7 @@ public class EmpController {
     @PostMapping
     public ResponseEntity<Employeedto>  createEmployee(@RequestBody Employeedto employeedto){
         Employeedto saved=empservice.createEmployee(employeedto);
-        return new ResponseEntity<>(saved, HttpStatus.OK);
+        return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
